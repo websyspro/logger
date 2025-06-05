@@ -7,7 +7,7 @@
   "type": "library",
   "autoload": {
     "psr-4": {
-      "Websyspro\\Watch\\": "src/"
+      "Websyspro\\Logger\\": "src/"
     }
   },
   "authors": [
