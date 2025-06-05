@@ -13,7 +13,7 @@ class Log
     Log::$startTimer = microtime(true);
   }
 
-  public static function getNowTimer(
+  private static function getNowTimer(
   ): int { 
     $starDiff = round(( 
       microtime(true) - Log::$startTimer
@@ -23,12 +23,12 @@ class Log
     return $starDiff;
   }
 
-  public static function getNow(
+  private static function getNow(
   ): string {
     return date( "[D M  d H:i:s Y]" );
   }
 
-  public static function getOrigem(
+  private static function getOrigem(
   ): string {
     [ "REMOTE_ADDR" => $remoteAddr, 
       "SERVER_PORT" => $serverPort ] = $_SERVER;
@@ -38,7 +38,7 @@ class Log
       : "[::1]:00000";
   }
 
-  public static function IsStartTimer(
+  private static function IsStartTimer(
   ): void {
     if(isset(Log::$startTimer) === false){
       Log::setStartTimer();
