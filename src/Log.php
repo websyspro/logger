@@ -48,7 +48,7 @@ class Log
   public static function Message(
     LogType $logType,
     string $logText
-  ): void {
+  ): bool {
     Log::IsStartTimer();
     fwrite( fopen('php://stdout', 'w'), (
       sprintf("\x1b[37m%s %s\x1b[32m LOG \x1b[33m[{$logType->value}] \x1b[32m{$logText}\x1b[37m \x1b[37m+%sms\n", 
@@ -57,12 +57,14 @@ class Log
         Log::getNowTimer(),
       )
     ));
+
+    return true;
   }
 
   public static function Error(
     LogType $logType,
     string $logText      
-  ): void {
+  ): bool {
     Log::IsStartTimer();
     fwrite( fopen('php://stdout', 'w'), (
       sprintf( "\x1b[37m%s %s\x1b[32m LOG \x1b[33m[{$logType->value}] \x1b[31m{$logText} \x1b[37m+%sms\n",
@@ -71,5 +73,7 @@ class Log
         Log::getNowTimer(),
       )
     ));
+
+    return false;
   }
 }

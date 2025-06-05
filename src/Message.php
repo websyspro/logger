@@ -9,20 +9,14 @@ class Message
   public static function Infors(
     LogType $logType,
     string $logText    
-  ): void {
-    Log::Message(
-      $logType, 
-      $logText
-    );
+  ): bool {
+    return Log::Message($logType, $logText);
   }
 
   public static function Error(
     LogType $logType,
     string $logText    
-  ): void {
-    Log::Error(
-      $logType, 
-      $logText
-    );
+  ): bool {
+    return Log::Error($logType, $logText);
   }
 }
