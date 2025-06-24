@@ -25,7 +25,7 @@ class Log
 
   private static function getNow(
   ): string {
-    return date( "[D M  d H:i:s Y]" );
+    return date( "[D M d H:i:s Y]" );
   }
 
   private static function getOrigem(
