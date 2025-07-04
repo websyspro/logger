@@ -6,17 +6,17 @@ use Websyspro\Logger\Enums\LogType;
 
 class Message
 {
-  public static function Infors(
+  public static function infors(
     LogType $logType,
     string $logText    
   ): bool {
-    return Log::Message($logType, $logText);
+    return Log::message($logType, $logText);
   }
 
-  public static function Error(
+  public static function error(
     LogType $logType,
     string $logText    
   ): bool {
-    return Log::Error($logType, $logText);
+    return Log::error($logType, $logText);
   }
 }

@@ -3,12 +3,12 @@
 namespace Websyspro\Logger\Enums;
 
 enum LogType: string {
-  case Module = "Module";
-  case Service = "Service";
-  case Entity = "Entity";
-  case Context = "Context";
-  case Controller = "Controller";
-  case Database = "Database";
-  case Import = "Import";
-  case QueryContext = "QueryContext";
+  case module = "Module";
+  case eervice = "Service";
+  case entity = "Entity";
+  case context = "Context";
+  case controller = "Controller";
+  case database = "Database";
+  case import = "Import";
+  case queryContext = "QueryContext";
 }
