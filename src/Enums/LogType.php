@@ -4,7 +4,7 @@ namespace Websyspro\Logger\Enums;
 
 enum LogType: string {
   case module = "Module";
-  case eervice = "Service";
+  case service = "Service";
   case entity = "Entity";
   case context = "Context";
   case controller = "Controller";
