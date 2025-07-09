@@ -30,6 +30,7 @@ class Log
 
   private static function getOrigem(
   ): string {
+    print_r($_SERVER);
     [ "REMOTE_ADDR" => $remoteAddr, 
       "SERVER_PORT" => $serverPort ] = $_SERVER;
 
