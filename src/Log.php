@@ -30,16 +30,20 @@ class Log
 
   private static function getOrigem(
   ): string {
-    print_r($_SERVER);
-    [ "REMOTE_ADDR" => $remoteAddr, 
-      "SERVER_PORT" => $serverPort ] = $_SERVER;
+    $remoteAddr = null;
+    $serverPort = null;
 
-    if($serverPort !== null){
-      $serverPort = str_pad(
-        $serverPort, 5, "0", STR_PAD_LEFT
-      );
-    }  
+    if(isset($_SERVER["REMOTE_ADDR"])){
+      [ "REMOTE_ADDR" => $remoteAddr, 
+        "SERVER_PORT" => $serverPort ] = $_SERVER;
 
+      if($serverPort !== null){
+        $serverPort = str_pad(
+          $serverPort, 5, "0", STR_PAD_LEFT
+        );
+      }  
+    }
+  
     return $remoteAddr !== null && $serverPort !== null
       ? "[{$remoteAddr}]:{$serverPort}"
       : "[::1]:00000";
