@@ -8,7 +8,7 @@ class Log
 {
   public static float $startTimer;
 
-  public static function setStartTimer(
+  private static function setStartTimer(
   ): void {
     Log::$startTimer = microtime(true);
   }

@@ -10,6 +10,9 @@
       "Websyspro\\Logger\\": "src/"
     }
   },
+  "scripts": {
+    "update-git": "git add . && git commit -m \"Update components\" && git push origin HEAD"
+  },
   "authors": [
     {
       "name": "websyspro",
