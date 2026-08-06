@@ -1,6 +1,6 @@
 <?php
 
-namespace Websyspro\Server\Commons;
+namespace Websyspro\Utils;
 
 use Closure;
 use function count;
