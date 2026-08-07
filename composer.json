@@ -1,6 +1,6 @@
 {
   "name": "websyspro/utils",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Set of features for front-end and back-end development",
   "minimum-stability": "dev",
   "prefer-stable": true,
@@ -12,14 +12,15 @@
     }
   },
   "scripts": {
-    "publish": "php bin/publish.php",
-    "git:push": "git add . && git commit -m \"Update components\" && git push origin HEAD",
-    "git:pull": "git pull origin main"
+    "publish": "php vendor/bin/publish"
   },
   "authors": [
     {
       "name": "websyspro",
       "email": "websyspro.services@gmail.com"
     }
-  ]
+  ],
+  "require": {
+    "websyspro/package": "^1.0"
+  }
 }
