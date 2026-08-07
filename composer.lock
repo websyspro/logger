@@ -4,21 +4,21 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "47300991cdd8088458a47594374cb8bd",
+    "content-hash": "97a1685947a582c83ba8d44684e86171",
     "packages": [],
     "packages-dev": [
         {
             "name": "websyspro/package",
-            "version": "1.0.20",
+            "version": "1.0.21",
             "source": {
                 "type": "git",
                 "url": "https://github.com/websyspro/package.git",
-                "reference": "f81a5e0374dbfe246e5860b09a6a772aab6b5d44"
+                "reference": "5d614fb14d1628a1fe0555ee2b229e6bd20055d9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/websyspro/package/zipball/f81a5e0374dbfe246e5860b09a6a772aab6b5d44",
-                "reference": "f81a5e0374dbfe246e5860b09a6a772aab6b5d44",
+                "url": "https://api.github.com/repos/websyspro/package/zipball/5d614fb14d1628a1fe0555ee2b229e6bd20055d9",
+                "reference": "5d614fb14d1628a1fe0555ee2b229e6bd20055d9",
                 "shasum": ""
             },
             "bin": [
@@ -43,9 +43,9 @@
             "description": "Version Management",
             "support": {
                 "issues": "https://github.com/websyspro/package/issues",
-                "source": "https://github.com/websyspro/package/tree/v1.0.20"
+                "source": "https://github.com/websyspro/package/tree/v1.0.21"
             },
-            "time": "2026-08-07T20:16:10+00:00"
+            "time": "2026-08-07T20:17:44+00:00"
         }
     ],
     "aliases": [],
