@@ -1,14 +1,14 @@
 {
-  "name": "websyspro/utils",
-  "version": "1.0.3",
-  "description": "Set of features for front-end and back-end development",
+  "name": "websyspro/logger",
+  "version": "1.0.1",
+  "description": "Library for logs in server api",
   "minimum-stability": "dev",
   "prefer-stable": true,
   "license": "MIT",
   "type": "library",
   "autoload": {
     "psr-4": {
-      "Websyspro\\Utils\\": "src/"
+      "Websyspro\\Logger\\": "src/"
     }
   },
   "scripts": {
