@@ -1,6 +1,6 @@
 {
   "name": "websyspro/logger",
-  "version": "1.0.20",
+  "version": "1.0.21",
   "description": "Library for logs in server api",
   "minimum-stability": "dev",
   "prefer-stable": true,
@@ -21,6 +21,9 @@
     }
   ],
   "require": {
+    "php": ">=7.4"
+  },
+  "require-dev": {
     "websyspro/package": "^1.0"
   }
 }
