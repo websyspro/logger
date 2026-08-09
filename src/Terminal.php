@@ -743,6 +743,13 @@ class Terminal
     return $this->write(" ");
   }  
 
+  public function timer(
+  ): static {
+    return $this->write(
+      date( "d/m/Y H:i:s" ) 
+    );
+  }  
+
   /**
    * Solicita confirmação do usuário (Sim/Não)
    * 
