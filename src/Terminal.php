@@ -733,6 +733,12 @@ class Terminal
     return trim(fgets(STDIN));
   }
 
+  public function spc(
+    string $spaceNumber = 1
+  ): static {
+    return $this->write( " " );
+  }  
+
   /**
    * Solicita confirmação do usuário (Sim/Não)
    * 
