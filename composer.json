@@ -1,6 +1,6 @@
 {
   "name": "websyspro/logger",
-  "version": "1.0.26",
+  "version": "1.0.27",
   "description": "Library for logs in server api",
   "minimum-stability": "dev",
   "prefer-stable": true,

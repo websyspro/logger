@@ -736,7 +736,11 @@ class Terminal
   public function spc(
     string $spaceNumber = 1
   ): static {
-    return $this->write( " " );
+    for($spc=0; $spc<$spaceNumber-1; $spc){
+      $this->write(" ");
+    }
+
+    return $this->write(" ");
   }  
 
   /**
