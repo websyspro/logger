@@ -43,7 +43,7 @@ class Terminal
   public function clear(
   ): static {
     return $this->write(
-      "\033[3J\033[H\033[2J", true
+      "\033[2J\033[3J\033[", true
     );
   }
 
