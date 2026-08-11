@@ -664,7 +664,6 @@ class Terminal
    * 
    * @param string $text O texto a ser escrito
    * @param Styled|null $styled Estilo opcional com color, bgColor e bold
-   * @param bool $flush Se true, força a saída imediata
    * @return static Retorna a própria instância para encadeamento de métodos
    */
   public function text(
