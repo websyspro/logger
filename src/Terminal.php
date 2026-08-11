@@ -660,19 +660,41 @@ class Terminal
   }
 
   /**
-   * Escreve texto simples sem formatação adicional
+   * Escreve texto simples, com formatação opcional via Styled
    * 
    * @param string $text O texto a ser escrito
+   * @param Styled|null $styled Estilo opcional com color, bgColor e bold
    * @param bool $flush Se true, força a saída imediata
    * @return static Retorna a própria instância para encadeamento de métodos
    */
   public function text(
     string $text,
-    bool $flush = false
+    Styled|null $styled = null
   ): static {
-    return $this->write(
-      $text, $flush
-    );
+    if ($styled === null) {
+      return $this->write($text, false );
+    }
+
+    $codes = [];
+
+    if( $styled->bold ){
+      $codes[] = "1";
+    }
+
+    if (!empty($styled->color)) {
+      [$r, $g, $b] = $styled->color;
+      $codes[] = "38;2;{$r};{$g};{$b}";
+    }
+
+    if (!empty($styled->bgColor)) {
+      [$r, $g, $b] = $styled->bgColor;
+      $codes[] = "48;2;{$r};{$g};{$b}";
+    }
+
+    $prefix = $codes ? "\033[" . implode(";", $codes) . "m" : "";
+    $suffix = $codes ? "\033[0m" : "";
+
+    return $this->write("{$prefix}{$text}{$suffix}", false);
   }
 
   /**
