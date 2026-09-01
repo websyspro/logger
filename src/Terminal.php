@@ -640,17 +640,14 @@ class Terminal
    * Aplica cor de fundo RGB personalizada ao texto (suporte a 256 cores)
    * 
    * @param string $text O texto a ter o fundo colorido
-   * @param int $r Valor vermelho (0-255)
-   * @param int $g Valor verde (0-255)
-   * @param int $b Valor azul (0-255)
+   * @param array $rgb Valor vermelho (0-255)
    * @return static Retorna a própria instância para encadeamento de métodos
    */
   public function bgRgb(
     string $text,
-    int $r,
-    int $g,
-    int $b
+    array $rgb
   ): static {
+    [$r,$g,$b] = $rgb;
     return $this->write(
       "\033[48;2;{$r};{$g};{$b}m{$text}\033[0m"
     );
