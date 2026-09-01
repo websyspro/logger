@@ -630,10 +630,9 @@ class Terminal
    */
   public function rgb(
     string $text,
-    int $r,
-    int $g,
-    int $b
+    array $rgb
   ): static {
+    [$r,$g,$b] = $rgb;
     return $this->write(
       "\033[38;2;{$r};{$g};{$b}m{$text}\033[0m"
     );
