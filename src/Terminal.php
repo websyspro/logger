@@ -623,9 +623,7 @@ class Terminal
    * Aplica cor RGB personalizada ao texto (suporte a 256 cores)
    * 
    * @param string $text O texto a ser colorido
-   * @param int $r Valor vermelho (0-255)
-   * @param int $g Valor verde (0-255)
-   * @param int $b Valor azul (0-255)
+   * @param array $rgb Valor vermelho (0-255)
    * @return static Retorna a própria instância para encadeamento de métodos
    */
   public function rgb(
