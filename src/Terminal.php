@@ -26,10 +26,9 @@ class Terminal
     string $value,
     bool $flush = false
   ): static {
-    fwrite( defined('STDOUT') ? \STDOUT : fopen('php://output', 'w'), $value );
-
-    if ($flush) {
-      if( defined('STDOUT') ) fflush( \STDOUT );
+    if( defined('STDOUT') ){
+      fwrite( \STDOUT, $value );
+      if( $flush ) fflush( \STDOUT );
     }
 
     return $this;
